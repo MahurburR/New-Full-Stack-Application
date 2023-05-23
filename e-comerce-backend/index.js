@@ -21,8 +21,8 @@ app.use("/api/products", productRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/cart", cartRoutes);
 
-const PORT = 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = 5000;
+app.listen(process.env.PORT || PORT, () => console.log(`Server running on port ${PORT}`));
 connectDB();
 process.on('SIGTERM', () =>
 {
